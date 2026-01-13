@@ -1,0 +1,395 @@
+/* src/App.css - COMPLETE VERSION */
+
+/* --- 1. GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0fdf4;
+  min-height: 100vh;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Screen full height */
+}
+
+.content-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- 2. NAVIGATION BAR --- */
+/* src/App.css - Update this section */
+
+.nav-bar {
+  background: white;
+  padding: 10px 20px;
+  /* Padding ah 30px la irundhu 20px ah kuraichu iruken */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  /* --- INDHA 2 LINES MUKKIYAM (Fixes Gap & Width) --- */
+  width: 100%;
+  box-sizing: border-box;
+  /* Padding ah width kulla ye adjust pannum */
+}
+
+/* src/App.css - Update this section */
+
+.nav-bar {
+  background: white;
+  padding: 10px 20px;
+  /* Padding ah 30px la irundhu 20px ah kuraichu iruken */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  box-sizing: border-box;
+  /* Padding ah width kulla ye adjust pannum */
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #16a34a;
+  text-decoration: none;
+}
+
+.nav-links-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #16a34a;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- 3. COMMON BOX STYLE (Login, Soil, Disease) --- */
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 30px;
+  /* Space from top */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.container input,
+.container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.container button:hover {
+  background-color: #15803d;
+}
+
+.container button:active {
+  transform: scale(0.98);
+}
+
+/* --- 4. HOME PAGE STYLES (Hero & Cards) --- */
+.home-container {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  border: 1px solid #bbf7d0;
+}
+
+.hero h1 {
+  color: #14532d;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  color: #166534;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #16a34a;
+  color: white;
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(22, 163, 74, 0.3);
+}
+
+/* src/App.css - Update only this section */
+
+/* Features Section - Grid Setup */
+.features {
+  display: flex;
+  /* Grid la irundhu Flex ku maathirom (Easy centering) */
+  justify-content: center;
+  /* Centre la kondu vara */
+  flex-wrap: wrap;
+  /* Mobile la keela keela vara */
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  /* Footer space */
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s;
+  text-align: center;
+
+  /* Fixed width for better look */
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.feature-card h3 {
+  color: #334155;
+  margin: 10px 0;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.feature-card a {
+  color: #16a34a;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+}
+
+/* --- 5. FOOTER STYLES --- */
+.site-footer {
+  background-color: #1e293b;
+  /* Dark Blue-Grey */
+  color: white;
+  padding: 40px 20px 20px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  color: #4ade80;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  color: #e2e8f0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4ade80;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #4ade80;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #334155;
+  padding-top: 20px;
+  margin-top: 20px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* Results Box Highlight */
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  color: #14532d;
+  text-align: left;
+}
+
+/* src/App.css (Add at the bottom) */
+
+/* Camera & Webcam Styles */
+.webcam-view {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+}
+
+.preview {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  /* Limit height */
+  border-radius: 10px;
+  border: 2px solid #22c55e;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* src/App.css - Append this at the end */
+
+/* Shopping Product Section */
+.product-card {
+  margin-top: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px dashed #ca8a04;
+}
+
+.buy-btn {
+  display: inline-block;
+  background-color: #f59e0b;
+  /* Amazon Orange/Gold */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #d97706;
+}
+
+/* src/App.css - Add at the bottom */
+
+.toggle-link {
+  color: #16a34a;
+  /* Green Color */
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggle-link:hover {
+  color: #14532d;
+  /* Dark Green on Hover */
+}
